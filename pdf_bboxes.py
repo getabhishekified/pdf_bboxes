@@ -14,6 +14,12 @@ output_dir = args.output_folder
 #creating output directory if does not exists
 if not os.path.exists(output_dir):
     os.makedirs(output_dir)
+char_output_dir = "char_output_dir/"
+words_output_dir = "words_output_dir/"
+if not os.path.exists(char_output_dir):
+    os.makedirs(char_output_dir)
+if not os.path.exists(words_output_dir):
+    os.makedirs(words_output_dir)
 
 #extracting characters from pdf
 file_start_pos = filepath.rfind("/")
