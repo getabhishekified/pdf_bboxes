@@ -1,0 +1,5 @@
+pdf2image==1.14.0
+numpy==1.19.4
+opencv-python==4.4.0.46
+PyPDF2==1.26.0
+pdfplumber==0.5.24
