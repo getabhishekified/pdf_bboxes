@@ -29,6 +29,10 @@ To get output as a JSON file :
 
     python pdf_bboxes.py --input '/home/gautam/Desktop/python/ocr/SEAGATE.PDF' --output_format 'json' --output_folder '/home/gautam/Desktop/python/ocr/abcd/'
 
+To get output as a CSV file :
+
+    python pdf_bboxes.py --input '/home/gautam/Desktop/python/ocr/SEAGATE.PDF' --output_format 'csv' --output_folder '/home/gautam/Desktop/python/ocr/abcd/'
+
 To get output as Images of each page of the PDF having  bounding boxes over each word and recognized text over the bounding boxes :
 
     python pdf_bboxes.py --input '/home/gautam/Desktop/python/ocr/SEAGATE.PDF' --output_format 'img' --output_folder '/home/gautam/Desktop/python/ocr/abcd/'

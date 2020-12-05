@@ -106,7 +106,32 @@ def populate_boxes_on_pdf(filepath, filename, result, img_output_dir):
 			thickness = 1
 			# Using cv2.putText() method 
 			image = cv2.putText(image, bbox["word"], (x0,y0-6), font,  
-			                   fontScale, color, thickness, cv2.LINE_AA) 
+							   fontScale, color, thickness, cv2.LINE_AA) 
 
 		cv2.imwrite(img_output_dir+filename+"-"+str(page_no)+".jpg", image)
+
+def create_csv_file(result, csv_out_filepath):
+	for page in result:
+		page_no = int(page["page_no"]) - 1
+		bboxes = page["bboxes"]
+
+		#csv params
+		rows = []
+
+		for bbox in bboxes:
+			xmin = int(float(bbox["startX"]))
+			ymin = int(float(bbox["startY"]))
+			xmax = int(float(bbox["endX"]))
+			ymax = int(float(bbox["endY"]))
+			Object = bbox["word"]
+
+			row = [xmin, ymin, xmax, ymax, Object]
+			rows.append(row)
 		
+		#writing into the csv file
+		with open(csv_out_filepath+str(page_no)+".csv", 'w+') as csv_file:
+				fieldnames = ['xmin', 'ymin', 'xmax', 'ymax', 'Object']
+				writer = csv.writer(csv_file)
+				writer.writerow(fieldnames)
+				writer.writerows(rows)
+				csv_file.close()
