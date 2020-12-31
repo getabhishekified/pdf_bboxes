@@ -40,3 +40,5 @@ To get output as Images of each page of the PDF having  bounding boxes over each
 
 Output JSON file and Images will be found in the **output_folder** you passed as an argument.
 
+
+Blog - https://www.devzoneoriginal.com/2021/01/draw-bounding-boxes-over-each-word-on.html
