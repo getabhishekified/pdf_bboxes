@@ -10,7 +10,7 @@ words_output_dir = "words_output_dir/"
 
 def extract_chars(filepath, filename):
 	output_filepath = char_output_dir+filename+"_chars.csv"
-	pdfplumber_cmd = "pdfplumber < '"+filepath+"' > '"+output_filepath+"'"
+	pdfplumber_cmd = "pdfplumber --types char < '"+filepath+"' > '"+output_filepath+"'"
 	subp.check_call(pdfplumber_cmd, shell=True)
 	return output_filepath
 
@@ -108,7 +108,7 @@ def populate_boxes_on_pdf(filepath, filename, result, img_output_dir):
 			image = cv2.putText(image, bbox["word"], (x0,y0-6), font,  
 							   fontScale, color, thickness, cv2.LINE_AA) 
 
-		cv2.imwrite(img_output_dir+filename+"-"+str(page_no)+".jpg", image)
+		cv2.imwrite(img_output_dir+"/"+filename+"-"+str(page_no)+".jpg", image)
 
 def create_csv_file(result, csv_out_filepath):
 	for page in result:

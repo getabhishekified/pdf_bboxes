@@ -15,13 +15,14 @@ This program can be used on any computer-generated PDFs, be it **Invoices**, **R
 ## How to run?
 
 In order to run this program, you need to pass 3 mandatory arguments:
-
-      --input INPUT         Path of a PDF file.
-      --output_format {json,img}
-                            'json' for JSON, 'img' for images with bounding boxes
-                            for all the pages of PDF.
-      --output_folder OUTPUT_FOLDER
-                            Output folder path.
+```
+  --input INPUT         Path of a PDF file.
+  --output_format {json,csv,img}
+                        'json' for JSON, 'csv' for CSV, 'img' for images with
+                        bounding boxes; for all the pages of PDF.
+  --output_folder OUTPUT_FOLDER
+                        Output folder path.
+```
 
 ### Syntax/Examples : 
 
