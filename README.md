@@ -8,9 +8,10 @@ Hi! This is a python CLI program which takes a **PDF** as an input and provides 
 This program can be used on any computer-generated PDFs, be it **Invoices**, **Research Papers**, **e-books**, etc. Its output can be used to make datasets for machine learning algorithms like GCN (Graph Convolutional Network) or other ML algorithms. 
 
 
-## Installation
+## Installation (Ubuntu)
 
     pip install -r requirements.txt
+    apt-get install poppler-utils
 
 ## How to run?
 

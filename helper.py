@@ -16,7 +16,7 @@ def extract_chars(filepath, filename):
 
 def group_chars_into_words(filepath, filename):
 	output_filepath = words_output_dir+filename+"_words.csv"
-	coalesce_cmd = "python coalesce_words.py '"+filepath+"' > '"+output_filepath+"'"
+	coalesce_cmd = "python3 coalesce_words.py '"+filepath+"' > '"+output_filepath+"'"
 	subp.check_call(coalesce_cmd, shell=True)
 	return output_filepath
 
