@@ -1,12 +1,13 @@
 # Welcome to pdf_bboxes!
 
-Hi! This is a python CLI program which takes a **PDF** as an input and provides bounding boxes over each word on all pages of the PDF in a nice and clean **json format**. 
+Hi! This is a **ubuntu** based python CLI program which takes a **PDF** as an input and provides bounding boxes over each word on all pages of the PDF in **json**, **csv**, and **image representation** of bboxes drawn over words with recognized 'text'. 
 
-**Note:** This program only accepts 'Text PDFs' and not 'Image or Scanned PDFs'.
+**Note:** This program only accepts 'Text PDFs' and not 'Image or Scanned PDFs'. It currently works on Ubuntu only. 
 
 ## Usage 
 This program can be used on any computer-generated PDFs, be it **Invoices**, **Research Papers**, **e-books**, etc. Its output can be used to make datasets for machine learning algorithms like GCN (Graph Convolutional Network) or other ML algorithms. 
 
+![Sample Output](/output/output.jpg)
 
 ## Installation (Ubuntu)
 
@@ -29,15 +30,15 @@ In order to run this program, you need to pass 3 mandatory arguments:
 
 To get output as a JSON file :
 
-    python3 pdf_bboxes.py --input '/home/gautam/Desktop/python/ocr/SEAGATE.PDF' --output_format 'json' --output_folder '/home/gautam/Desktop/python/ocr/abcd/'
+    python3 pdf_bboxes.py --input '/home/gautam/Desktop/python/ocr/input/sample.pdf' --output_format 'json' --output_folder '/home/gautam/Desktop/python/ocr/output/'
 
 To get output as a CSV file :
 
-    python3 pdf_bboxes.py --input '/home/gautam/Desktop/python/ocr/SEAGATE.PDF' --output_format 'csv' --output_folder '/home/gautam/Desktop/python/ocr/abcd/'
+    python3 pdf_bboxes.py --input '/home/gautam/Desktop/python/ocr/input/sample.pdf' --output_format 'csv' --output_folder '/home/gautam/Desktop/python/ocr/output/'
 
 To get output as Images of each page of the PDF having  bounding boxes over each word and recognized text over the bounding boxes :
 
-    python3 pdf_bboxes.py --input '/home/gautam/Desktop/python/ocr/SEAGATE.PDF' --output_format 'img' --output_folder '/home/gautam/Desktop/python/ocr/abcd/'
+    python3 pdf_bboxes.py --input '/home/gautam/Desktop/python/ocr/input/sample.pdf' --output_format 'img' --output_folder '/home/gautam/Desktop/python/ocr/output/'
 
 Output JSON file and Images will be found in the **output_folder** you passed as an argument.
 
