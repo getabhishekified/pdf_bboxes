@@ -1,3 +1,3 @@
 char_output_dir/
 words_output_dir/
-output/
+__pycache__
